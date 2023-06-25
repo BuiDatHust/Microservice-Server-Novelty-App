@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package sample1;
+
+message Sample1Request {
+  int32 numOfParagraphs = 1;
+}
+
+message Sample1Response {
+  string paragraph = 1;
+}
+
+service Sample1Service {
+  rpc generate1 (Sample1Request) returns (stream Sample1Response) {}
+}
